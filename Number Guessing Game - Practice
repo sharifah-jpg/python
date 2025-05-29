@@ -19,6 +19,33 @@ while gc < ch:
         break
     elif gc >= ch and guess != num:
         print(f"Sorry! The number was {num}. Better luck next time.")
+
+#my version
+import random
+
+name = input("Welcome to Number Guessing Game!\nInsert your name: ")
+print(f"Hi {name}!!!")
+low = int(input("Insert your lower bound: "))
+high = int(input("Insert your upper bound: "))
+print(f"Alright! Now you will be guessing numbers between {low} and {high}!\nYou are only given 7 attempts!")
+
+num = random.randint(low, high)
+ch = 7
+gc = 0
+
+
+while gc < ch:
+    gc +=1
+    guess = int(input("Insert your guess: "))
+    if guess == num:
+        print(f'Brilliant! You got it in {gc} attempt!')
+        break
+    elif gc == 7 and guess != num:
+        print("You got it wrong in all 7 attempts. Try again next time.")
+    elif guess < num:
+        print("That's too low!")
+    elif guess > num:
+        print("That's too high!")
     elif guess > num:
         print("Oh no! It's too high.")
     elif guess < num:
