@@ -1,0 +1,11 @@
+print('BMI Calculator')
+insert_weight = input('Your weight: ')
+insert_height = input('Your height: ')
+try:
+    weight = insert_weight
+    height = insert_height
+    bmi = round((float(weight))/(float(height)**2), 2)
+    print('Your BMI: ', bmi)
+
+except:
+    print('Error')
