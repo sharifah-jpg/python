@@ -1,0 +1,26 @@
+import random
+
+print("Welcome")
+
+low = int(input("Enter lower bound: "))
+high = int(input("Enter upper bound: "))
+
+print(f"Great! Now guess between {low} and {high}")
+
+num = random.randint(low, high)
+gc = 0
+ch = 7
+
+while gc < ch:
+    gc += 1
+    guess = int(input("Enter your guess: "))
+    if guess == num:
+        print(f"Correct! The number is {num}.")
+        print(f"You guessed in {gc} attempts")
+        break
+    elif gc >= ch and guess != num:
+        print(f"Wrong. Try again next time. The answer is {num}")
+    elif guess > num:
+        print("That's too high.")
+    elif guess < num:
+        print("That's too low.")
